@@ -1,0 +1,82 @@
+{
+  "name": "trace-breaking-change",
+  "version": "0.0.1",
+  "description": "trace breaking changes in npm modules",
+  "keywords": [
+    "trace-breaking-change",
+    "breaking",
+    "change",
+    "semver",
+    "break",
+    "version",
+    "major",
+    "minor",
+    "patch",
+    "trace",
+    "npm",
+    "bug",
+    "debug",
+    "update"
+  ],
+  "homepage": "https://github.com/codejamninja/trace-breaking-change",
+  "bugs": {
+    "url": "https://github.com/codejamninja/trace-breaking-change/issues",
+    "email": "jam@codejam.ninja"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jam Risser",
+    "email": "jam@codejam.ninja",
+    "url": "https://codejam.ninja"
+  },
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "main": "lib/index.js",
+  "bin": {
+    "trace-breaking-change": "bin/trace-breaking-change.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codejamninja/trace-breaking-change"
+  },
+  "scripts": {
+    "build": "npm run test && babel src -d lib",
+    "clean": "git clean -fXd -e \\!node_modules -e \\!node_modules/**/*",
+    "clean:purge": "git clean -fXd",
+    "format": "prettier --write ./src/**/*.js",
+    "lint": "npm run format && eslint ./",
+    "lint:fix": "npm run format && eslint --fix ./",
+    "prepublish": "npm run build",
+    "start": "babel-node src/bin trace",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.3",
+    "cheerio": "^1.0.0-rc.2",
+    "commander": "^2.19.0",
+    "cross-spawn": "^6.0.5",
+    "err": "^2.1.11",
+    "fs-extra": "^7.0.1",
+    "lodash": "^4.17.11",
+    "pkg-dir": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "babel-preset-jam": "^0.1.0",
+    "eslint": "^5.9.0",
+    "eslint-config-jam": "^0.1.6",
+    "yo": "^2.0.5"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "eslintIgnore": [
+    "lib"
+  ]
+}
