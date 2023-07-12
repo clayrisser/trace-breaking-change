@@ -2,6 +2,9 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/codejamninja/trace-breaking-change.svg?style=social&label=Stars)](https://github.com/codejamninja/trace-breaking-change)
 
+
+![](assets/trace-breaking-change.png)
+
 > trace breaking changes in npm modules
 
 Please ★ this repo if you found it useful ★ ★ ★
